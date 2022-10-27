@@ -1,0 +1,30 @@
+footer {
+
+	position: absolute;
+
+	top: 95%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	width: fit-content;
+	height: 4%;
+}
+
+footer img {
+
+	height: 100%;
+}
+
+footer span {
+
+	font-size: large;
+
+	position: relative;
+	top: -20%;
+}
+
+a {
+
+	all: unset;
+}

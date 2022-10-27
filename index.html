@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./style/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="./style/header.css">
+	<link rel="stylesheet" href="./style/footer.css">
+
+    <title>DomeDeFerV2</title>
+  </head>
+  <body>
+
+	<header>
+		<button class="menu"><img src="./assets/menu-1.1s-200px.png" alt="menu" id="menuBtn"></button>
+		<div class="title">Le Dome de Fer</div>
+		<button class="close"><img src="./assets/cross-1.1s-200px.png" alt="exit" id="closeBtn"></button>
+		<button class="minimize"><img src="./assets/icons8-subtract-60.png" alt="minimize" id="minimizeBtn"></button>
+	</header>
+
+	<div id="mainApp">
+		<div class="centered">
+			<ul class="loading">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<a href="https://github.com/Ciliste">
+		<footer>
+			<img src="./assets/github.png" alt="github">
+			<span>GitHub</span>
+		</footer>
+	</a>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./js/renderer.js"></script>
+	<script defer src="./js/appFunction.js"></script>
+  </body>
+</html>
