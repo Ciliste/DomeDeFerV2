@@ -75,9 +75,26 @@ app.whenReady().then(() => {
 
 	])
 
+	connectedLogins = []
 	mainShell.stdout.on('data', (data) => {
 
-		// console.log(`${data}`);
+		data.toString().replace('\n', '').split('/').forEach((login) => {
+
+			if (!connectedLogins.includes(login)) {
+
+				connectedLogins.push(login)
+				console.log(login + " connected")
+			}
+		})
+
+		connectedLogins.forEach(login => {
+			
+			if (!data.toString().replace('\n', '').split('/').includes(login)) {
+
+				connectedLogins.splice(connectedLogins.indexOf(login), 1)
+				console.log(login + " disconnected")
+			}
+		});
 	})
 
 	mainShell.stderr.on('data', (data) => {

@@ -3,9 +3,9 @@
 while [ true ] 
 do
 
+	str=""
     for login in $(w | cut -f1 -d" " | sed "1,2d") 
     do
-		str=""
         if [[ "$login" != "$(whoami)" ]] 
         then
 
@@ -17,6 +17,9 @@ do
 			fi
 			str="${str}${login}"
         fi
-		echo $str
     done
+	if [[ "$str" != "" ]]
+	then
+		echo $str
+	fi
 done
