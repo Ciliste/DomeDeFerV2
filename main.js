@@ -2,6 +2,7 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 const spawn = require('child_process').spawn;
+const shell = require('electron').shell;
 
 const ipc = ipcMain;
 
@@ -29,6 +30,11 @@ function createWindow () {
 	// Open the DevTools.
 	// mainWindow.webContents.openDevTools()
 
+	ipc.on('connection', (login) => {
+
+		console.log("New connection : " + login);
+	})
+
 	ipc.on('closeApp', () => {
 
 		console.log('closeApp');
@@ -44,6 +50,11 @@ function createWindow () {
 	ipc.on('menuClick', () => {
 
 		console.log('menuClick');
+	})
+
+	ipc.on('githubLink', () => {
+
+		shell.openExternal("https://github.com/Ciliste/DomeDeFerV2")
 	})
 }
 
@@ -83,7 +94,7 @@ app.whenReady().then(() => {
 			if (!connectedLogins.includes(login)) {
 
 				connectedLogins.push(login)
-				console.log(login + " connected")
+				console.log("New connection : " + login)
 			}
 		})
 

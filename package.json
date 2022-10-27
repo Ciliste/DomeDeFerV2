@@ -1,22 +1,21 @@
 {
-  "name": "electron-quick-start",
+  "name": "DomeDeFerV2",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Dome de fer",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/Ciliste/DomeDeFerV2",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
-  "author": "GitHub",
+  "author": "Ciliste",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^21.1.1"
+  },
+  "dependencies": {
+    "shell": "^0.9.4"
   }
 }

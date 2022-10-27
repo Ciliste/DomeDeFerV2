@@ -9,6 +9,8 @@ footer {
 
 	width: fit-content;
 	height: 4%;
+
+	cursor: pointer;
 }
 
 footer img {

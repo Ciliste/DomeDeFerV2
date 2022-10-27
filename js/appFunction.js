@@ -15,3 +15,8 @@ menuBtn.addEventListener('click', () => {
 
 	ipc.send('menuClick');
 });
+
+githubLink.addEventListener('click', () => {
+
+	ipc.send('githubLink');
+});
